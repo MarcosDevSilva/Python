@@ -1,5 +1,5 @@
 numero = 10
-palpite = input("digite um valor: ")
+palpite = input("digite um valor (1 a 100): ")
 palpite = int(palpite)
 diferenca = numero - palpite
 
@@ -7,7 +7,13 @@ diferenca = numero - palpite
 if diferenca == 0:
     print("vc acertou.")
 elif diferenca > 0:
-    print("Vc erro o numero e maior")
+    if diferenca <= 10:
+        print("Vc erro o numero e maior (esta quente)")
+    else: 
+        print("Vc erro o numero e maior (esta frio)")
 
 else:
-    print("vc errou o numero e maior")
+    if abs(diferenca) <=10:
+        print("vc errou o numero e maior (esta quente)")
+    else: 
+        print("vc errou o numero e maior (esta frio)")
